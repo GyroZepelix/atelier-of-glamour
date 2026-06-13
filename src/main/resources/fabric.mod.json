@@ -37,6 +37,6 @@
     "minecraft": "=1.20.1",
     "java": ">=17",
     "fabric-api": "*",
-    "hexcasting": ">=0.11.3"
+    "hexcasting": ">=0.11.3 <0.12"
   }
 }
