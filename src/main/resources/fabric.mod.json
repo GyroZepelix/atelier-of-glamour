@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "atelier-of-glamour",
+  "version": "${version}",
+  "name": "Atelier of Glamour",
+  "description": "Hexcasting addon mod that adds swag and glamour to any caster that wishes it!",
+  "authors": [
+    "GyroZepelix"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/atelier-of-glamour/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.dgjalic.AtelierOfGlamour"
+    ],
+    "client": [
+      "com.dgjalic.client.AtelierOfGlamourClient"
+    ],
+    "fabric-datagen": [
+      "com.dgjalic.client.AtelierOfGlamourDataGenerator"
+    ]
+  },
+  "mixins": [
+    "atelier-of-glamour.mixins.json",
+    {
+      "config": "atelier-of-glamour.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.14",
+    "minecraft": "=1.20.1",
+    "java": ">=17",
+    "fabric-api": "*",
+    "hexcasting": ">=0.11.3"
+  }
+}
