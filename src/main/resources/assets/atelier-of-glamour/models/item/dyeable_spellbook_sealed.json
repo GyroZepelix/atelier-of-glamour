@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "atelier-of-glamour:item/dyeable_spellbook_sealed",
-    "layer1": "atelier-of-glamour:item/dyeable_spellbook_sealed_pages",
-    "layer2": "atelier-of-glamour:item/dyeable_spellbook_sealed_overlay"
-  }
-}

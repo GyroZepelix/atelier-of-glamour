@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [
+    {
+      "model": "atelier_of_glamour:item/dyeable_spellbook_filled",
+      "predicate": {
+        "hexcasting:overlay_layer": 1.0
+      }
+    },
+    {
+      "model": "atelier_of_glamour:item/dyeable_spellbook_sealed",
+      "predicate": {
+        "hexcasting:overlay_layer": 2.0
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "atelier_of_glamour:item/dyeable_spellbook_empty",
+    "layer1": "atelier_of_glamour:item/dyeable_spellbook_empty_pages"
+  }
+}

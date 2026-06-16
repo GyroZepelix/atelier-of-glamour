@@ -31,7 +31,7 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"atelier-of-glamour" {
+		"atelier_of_glamour" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}

@@ -1,0 +1,6 @@
+{
+    "item.atelier_of_glamour.dyeable_spellbook": "Spellbook",
+    "atelier_of_glamour.patchouli.entry.dyeable_spellbook": "Dyeable Spellbook",
+    "atelier_of_glamour.patchouli.page.dyeable_spellbook.1": "I thought my $(l:items/spellbook)$(item)Spellbook/$ was already too fine a thing to improve, until I realized how dreadful it is to mistake one volume for another at the bottom of my pack.$(br2)A little dye worked into the cover marks it plainly, and the hexes within are left undisturbed.",
+    "atelier_of_glamour.patchouli.page.dyeable_spellbook.crafting.desc": "Working one or more $(item)dyes/$ into a $(l:items/spellbook)$(item)Spellbook/$ stains only the cover. Most pleasingly, the contents survive the operation.$(br2)$(italic)I should stop treating that as surprising, the book at least, has better discipline than I do./$"
+}
