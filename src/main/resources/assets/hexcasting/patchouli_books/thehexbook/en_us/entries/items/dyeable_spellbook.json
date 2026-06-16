@@ -1,0 +1,18 @@
+{
+    "name": "atelier-of-glamour.patchouli.entry.dyeable_spellbook",
+    "icon": "atelier-of-glamour:dyeable_spellbook{Rainbow:1b}",
+    "category": "hexcasting:items",
+    "advancement": "hexcasting:root",
+    "sortnum": 4,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "text": "atelier-of-glamour.patchouli.page.dyeable_spellbook.1"
+        },
+        {
+            "type": "patchouli:crafting",
+            "recipe": "atelier-of-glamour:dyeable_spellbook",
+            "text": "atelier-of-glamour.patchouli.page.dyeable_spellbook.crafting.desc"
+        }
+    ]
+}

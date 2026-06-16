@@ -17,40 +17,50 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
 
 public class AtelierOfGlamourClient implements ClientModInitializer {
-    @Override
-    public void onInitializeClient() {
-        IClientXplatAbstractions.INSTANCE.registerItemProperty(AtelierItems.DYEABLE_SPELLBOOK, ItemFocus.OVERLAY_PRED,
-            (stack, level, holder, holderId) -> {
-                if (AtelierItems.DYEABLE_SPELLBOOK.readIotaTag(stack) == null
-                    && !NBTHelper.hasString(stack, IotaHolderItem.TAG_OVERRIDE_VISUALLY)) {
-                    return 0;
-                }
-                return ItemSpellbook.isSealed(stack) ? 2 : 1;
-            });
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> switch (tintIndex) {
-            case 0 -> AtelierItems.DYEABLE_SPELLBOOK.getColor(stack);
-            case 2 -> getIotaColor(stack);
-            default -> 0xFFFFFF;
-        }, AtelierItems.DYEABLE_SPELLBOOK);
-    }
+	private static final String RAINBOW_TAG = "Rainbow";
 
-    private static int getIotaColor(ItemStack stack) {
-        if (NBTHelper.hasString(stack, IotaHolderItem.TAG_OVERRIDE_VISUALLY)) {
-            var override = NBTHelper.getString(stack, IotaHolderItem.TAG_OVERRIDE_VISUALLY);
-            if (override != null && ResourceLocation.isValidResourceLocation(override)) {
-                var key = new ResourceLocation(override);
-                if (HexIotaTypes.REGISTRY.containsKey(key)) {
-                    var iotaType = HexIotaTypes.REGISTRY.get(key);
-                    if (iotaType != null) {
-                        return iotaType.color();
-                    }
-                }
-            }
+	@Override
+	public void onInitializeClient() {
+		IClientXplatAbstractions.INSTANCE.registerItemProperty(AtelierItems.DYEABLE_SPELLBOOK, ItemFocus.OVERLAY_PRED,
+				(stack, level, holder, holderId) -> {
+					if (AtelierItems.DYEABLE_SPELLBOOK.readIotaTag(stack) == null
+							&& !NBTHelper.hasString(stack, IotaHolderItem.TAG_OVERRIDE_VISUALLY)) {
+						return 0;
+					}
+					return ItemSpellbook.isSealed(stack) ? 2 : 1;
+				});
+		ColorProviderRegistry.ITEM.register((stack, tintIndex) -> switch (tintIndex) {
+		case 0 -> getDyeableSpellbookColor(stack);
+		case 2 -> getIotaColor(stack);
+		default -> 0xFFFFFF;
+		}, AtelierItems.DYEABLE_SPELLBOOK);
+	}
 
-            return 0xFF000000 | Mth.hsvToRgb(ClientTickCounter.getTotal() * 2 % 360 / 360F, 0.75F, 1F);
-        }
+	private static int getDyeableSpellbookColor(ItemStack stack) {
+		var tag = stack.getTag();
+		if (tag != null && tag.getBoolean(RAINBOW_TAG)) {
+			return Mth.hsvToRgb(ClientTickCounter.getTotal() * 2 % 360 / 360F, 0.75F, 1F);
+		}
+		return AtelierItems.DYEABLE_SPELLBOOK.getColor(stack);
+	}
 
-        var tag = AtelierItems.DYEABLE_SPELLBOOK.readIotaTag(stack);
-        return tag == null ? HexUtils.ERROR_COLOR : IotaType.getColor(tag);
-    }
+	private static int getIotaColor(ItemStack stack) {
+		if (NBTHelper.hasString(stack, IotaHolderItem.TAG_OVERRIDE_VISUALLY)) {
+			var override = NBTHelper.getString(stack, IotaHolderItem.TAG_OVERRIDE_VISUALLY);
+			if (override != null && ResourceLocation.isValidResourceLocation(override)) {
+				var key = new ResourceLocation(override);
+				if (HexIotaTypes.REGISTRY.containsKey(key)) {
+					var iotaType = HexIotaTypes.REGISTRY.get(key);
+					if (iotaType != null) {
+						return iotaType.color();
+					}
+				}
+			}
+
+			return 0xFF000000 | Mth.hsvToRgb(ClientTickCounter.getTotal() * 2 % 360 / 360F, 0.75F, 1F);
+		}
+
+		var tag = AtelierItems.DYEABLE_SPELLBOOK.readIotaTag(stack);
+		return tag == null ? HexUtils.ERROR_COLOR : IotaType.getColor(tag);
+	}
 }

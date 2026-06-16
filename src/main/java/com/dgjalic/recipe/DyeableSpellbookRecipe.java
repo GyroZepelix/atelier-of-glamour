@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import net.fabricmc.fabric.api.tag.convention.v1.ConventionalItemTags;
+import net.minecraft.core.NonNullList;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
@@ -20,6 +21,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.CraftingBookCategory;
 import net.minecraft.world.item.crafting.CustomRecipe;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.Level;
 
@@ -90,6 +92,14 @@ public class DyeableSpellbookRecipe extends CustomRecipe {
     @Override
     public boolean canCraftInDimensions(int width, int height) {
         return width * height >= 2;
+    }
+
+    @Override
+    public NonNullList<Ingredient> getIngredients() {
+        NonNullList<Ingredient> ingredients = NonNullList.create();
+        ingredients.add(Ingredient.of(HexItems.SPELLBOOK));
+        ingredients.add(Ingredient.of(ConventionalItemTags.DYES));
+        return ingredients;
     }
 
     @Override
