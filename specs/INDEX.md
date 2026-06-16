@@ -2,6 +2,7 @@
 
 ## Plans
 
+- [260616-1939-dyeable-spellbook-texture-layers.md](260616-1939-dyeable-spellbook-texture-layers.md): Plan for splitting the dyeable spellbook into dyed cover, untinted pages, and iota overlay texture layers.
 - [260613-2146-dyeable-spellbook-plan.md](260613-2146-dyeable-spellbook-plan.md): Plan for adding a dyeable Hexcasting spellbook variant with matching behavior and custom rendering.
 
 ## References

@@ -29,7 +29,7 @@ public class AtelierOfGlamourClient implements ClientModInitializer {
             });
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> switch (tintIndex) {
             case 0 -> AtelierItems.DYEABLE_SPELLBOOK.getColor(stack);
-            case 1 -> getIotaColor(stack);
+            case 2 -> getIotaColor(stack);
             default -> 0xFFFFFF;
         }, AtelierItems.DYEABLE_SPELLBOOK);
     }

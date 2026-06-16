@@ -15,6 +15,7 @@
     }
   ],
   "textures": {
-    "layer0": "atelier-of-glamour:item/dyeable_spellbook_empty"
+    "layer0": "atelier-of-glamour:item/dyeable_spellbook_empty",
+    "layer1": "atelier-of-glamour:item/dyeable_spellbook_empty_pages"
   }
 }

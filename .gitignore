@@ -42,3 +42,4 @@ replay_*.log
 # metals-lsp
 .bloop/
 .metals/
+references/
