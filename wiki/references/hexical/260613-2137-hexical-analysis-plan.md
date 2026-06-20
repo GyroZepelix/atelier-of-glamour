@@ -36,7 +36,7 @@ Analyze https://github.com/miyucomics/hexical to extract reusable knowledge, imp
 
 ### Phase 1: Repository map
 
-Deliverable: `specs/references/hexical/260613-2137-hexical-repository-map.md`
+Deliverable: `wiki/references/hexical/260613-2137-hexical-repository-map.md`
 
 Tasks:
 - Clone or fetch the upstream repository into a temporary research location.
@@ -51,7 +51,7 @@ Acceptance criteria:
 
 ### Phase 2: Architecture and initialization patterns
 
-Deliverable: `specs/references/hexical/260613-2137-hexical-architecture-patterns.md`
+Deliverable: `wiki/references/hexical/260613-2137-hexical-architecture-patterns.md`
 
 Tasks:
 - Trace startup flow from mod entry points into registration/init modules.
@@ -65,7 +65,7 @@ Acceptance criteria:
 
 ### Phase 3: Hexcasting integration study
 
-Deliverable: `specs/references/hexical/260613-2137-hexical-hexcasting-patterns.md`
+Deliverable: `wiki/references/hexical/260613-2137-hexical-hexcasting-patterns.md`
 
 Tasks:
 - Inventory Hexcasting actions and related classes.
@@ -85,7 +85,7 @@ Acceptance criteria:
 
 ### Phase 4: Feature pattern catalog
 
-Deliverable: `specs/references/hexical/260613-2137-hexical-feature-pattern-catalog.md`
+Deliverable: `wiki/references/hexical/260613-2137-hexical-feature-pattern-catalog.md`
 
 Tasks:
 - Review representative feature families instead of every file equally:
@@ -109,7 +109,7 @@ Acceptance criteria:
 
 ### Phase 5: Client, rendering, and networking study
 
-Deliverable: `specs/references/hexical/260613-2137-hexical-client-render-networking.md`
+Deliverable: `wiki/references/hexical/260613-2137-hexical-client-render-networking.md`
 
 Tasks:
 - Trace how server actions cause client effects, particles, overlays, animations, or sounds.
@@ -123,7 +123,7 @@ Acceptance criteria:
 
 ### Phase 6: Data, assets, and documentation pipeline
 
-Deliverable: `specs/references/hexical/260613-2137-hexical-docs-data-assets.md`
+Deliverable: `wiki/references/hexical/260613-2137-hexical-docs-data-assets.md`
 
 Tasks:
 - Inspect `doc`, `src/main/resources`, generated data, lang files, models, textures, recipes, loot, tags, and Patchouli/hexdoc configuration.
@@ -136,7 +136,7 @@ Acceptance criteria:
 
 ### Phase 7: Reuse recommendations
 
-Deliverable: `specs/references/hexical/260613-2137-hexical-reuse-recommendations.md`
+Deliverable: `wiki/references/hexical/260613-2137-hexical-reuse-recommendations.md`
 
 Tasks:
 - Rank extracted patterns as:
@@ -193,13 +193,13 @@ Use this structure for each extracted pattern:
 
 The completed research should produce:
 
-- `specs/references/hexical/260613-2137-hexical-repository-map.md`
-- `specs/references/hexical/260613-2137-hexical-architecture-patterns.md`
-- `specs/references/hexical/260613-2137-hexical-hexcasting-patterns.md`
-- `specs/references/hexical/260613-2137-hexical-feature-pattern-catalog.md`
-- `specs/references/hexical/260613-2137-hexical-client-render-networking.md`
-- `specs/references/hexical/260613-2137-hexical-docs-data-assets.md`
-- `specs/references/hexical/260613-2137-hexical-reuse-recommendations.md`
+- `wiki/references/hexical/260613-2137-hexical-repository-map.md`
+- `wiki/references/hexical/260613-2137-hexical-architecture-patterns.md`
+- `wiki/references/hexical/260613-2137-hexical-hexcasting-patterns.md`
+- `wiki/references/hexical/260613-2137-hexical-feature-pattern-catalog.md`
+- `wiki/references/hexical/260613-2137-hexical-client-render-networking.md`
+- `wiki/references/hexical/260613-2137-hexical-docs-data-assets.md`
+- `wiki/references/hexical/260613-2137-hexical-reuse-recommendations.md`
 
 ## Definition of done
 

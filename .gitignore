@@ -43,3 +43,5 @@ replay_*.log
 .bloop/
 .metals/
 references/
+!wiki/references/
+!wiki/references/**
