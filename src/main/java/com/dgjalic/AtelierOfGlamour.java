@@ -1,5 +1,6 @@
 package com.dgjalic;
 
+import com.dgjalic.command.AtelierCommands;
 import com.dgjalic.registry.AtelierItems;
 import com.dgjalic.registry.AtelierRecipeSerializers;
 import net.fabricmc.api.ModInitializer;
@@ -14,5 +15,6 @@ public class AtelierOfGlamour implements ModInitializer {
     public void onInitialize() {
         AtelierItems.register();
         AtelierRecipeSerializers.register();
+        AtelierCommands.register();
     }
 }

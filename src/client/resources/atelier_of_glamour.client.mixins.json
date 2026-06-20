@@ -3,6 +3,7 @@
   "package": "com.dgjalic.client.mixin",
   "compatibilityLevel": "JAVA_17",
   "client": [
+    "ItemRendererTransmogMixin",
     "ShiftScrollListenerMixin"
   ],
   "injectors": {
